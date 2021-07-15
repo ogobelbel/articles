@@ -14,6 +14,9 @@ main{
 }
 
 input, textarea{
+    font-family: sans-serif;
+    font-family: 'Lato';
+    font-style: normal;
     outline: none;
     font-weight: 600;
     font-size: 18px;
@@ -28,6 +31,11 @@ a {
 
 button{
     cursor:pointer;
+}
+
+
+hr{
+    margin-bottom: 25px;
 }
 
 h4 {
@@ -52,7 +60,7 @@ p {
 
 body {
     font-family: sans-serif;
-    font-family: 'Lato';
+    font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
     font-style: normal;
     color: white;
 }
@@ -144,8 +152,6 @@ header {
 .user_block{
     display: flex;
 }
-
-
 
 .avatar_user_name{
     margin-right: 10px;
@@ -239,7 +245,7 @@ input::placeholder{
 
 .articles{
     width: 100%;
-    height: 734px;
+    min-height: 386px;
  display: flex;
  flex-wrap: wrap;
     margin-bottom: 80px;
@@ -281,8 +287,7 @@ padding: 0 15px;
     height: 50%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
 }
 
 .article_tags_list{
@@ -414,7 +419,10 @@ color: #828282;
 }
 
 .article_picture{
+    width: 1152px;
+    height: 468px;
     margin-bottom: 50px;
+    object-fit: contain;
 }
 
 
@@ -705,6 +713,13 @@ margin-bottom: 40px;
     color: #333333;
 }
 
+.search_head{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 .check_wrapper{
     display: flex;
     align-items: center;
@@ -744,4 +759,11 @@ margin-bottom: 40px;
     letter-spacing: 0.0168em;
     font-feature-settings: 'tnum' on, 'lnum' on;
     color: #333333;
+}
+
+.more_tags_block{
+    position: relative;
+    width: 100%;
+    height: 212px;
+    background-color:rgb(128, 221, 128);
 }
