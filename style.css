@@ -419,7 +419,7 @@ color: #828282;
 }
 
 .article_picture{
-    width: 1152px;
+    max-width: 1152px;
     height: 468px;
     margin-bottom: 50px;
     object-fit: contain;
