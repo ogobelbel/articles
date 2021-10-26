@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "leverx-554f0": {
+      "hosting": {
+        "my-app": [
+          "leverx-554f0"
+        ]
+      }
+    }
+  }
+}

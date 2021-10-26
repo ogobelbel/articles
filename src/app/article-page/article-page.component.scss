@@ -1,0 +1,120 @@
+@import "src/app/styles/mixins";
+
+.article_wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.navigation_list {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0;
+}
+
+h6 a {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #828282;
+}
+
+.navigation_list__item + .navigation_list__item h6::before {
+  content: "";
+  background-image: url(../../assets/images/arrow_nav.svg);
+  padding: 10px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article_active {
+  color: #333333;
+}
+
+.article_picture {
+  max-width: 1152px;
+  width: 50%;
+  height: calc(50vh - 100px);
+  margin: 0 auto 50px auto;
+  @include imageBackground;
+
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 56px;
+  display: flex;
+  letter-spacing: -0.005em;
+  color: #333333;
+  margin-bottom: 50px;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 132%;
+  display: flex;
+  align-items: center;
+  color: #4F4F4F;
+  margin-bottom: 30px;
+}
+
+.article_text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.0168em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #4F4F4F;
+  margin-bottom: 30px;
+}
+
+.centered_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.article_tags_list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.article_tags {
+  width: auto;
+  padding: 8px 24px;
+  background-color: white;
+  color: black;
+  border-radius: 40px;
+  box-shadow: 0px 6px 8px rgba(234, 237, 242, 0.5);
+  white-space: nowrap;
+  margin: 0 3px 3px 3px;
+  user-select: none;
+  cursor: pointer;
+}
+
+address {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.005em;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  font-style: normal;
+  color: #333333;
+  margin-bottom: 40px;
+}
+
+.tags_list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
