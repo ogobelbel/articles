@@ -1,0 +1,52 @@
+<main *ngIf="!!articleData; else empty">
+  <div class="article_wrapper">
+    <div class="navigation_list">
+      <div class="navigation_list__item">
+        <h6>
+          <a routerLink=''>
+            Home page
+          </a>
+        </h6>
+      </div>
+      <div class="navigation_list__item">
+        <h6>
+          <a class="article_active">
+            Article
+          </a>
+        </h6>
+      </div>
+    </div>
+    <div>
+      <div class="centered_content">
+        <h3>{{articleData.title}}</h3>
+        <div class="article_picture" [ngStyle]="backgroundImageUrl"></div>
+          <div *ngFor="let subtitle of articleData.subTitles; index as i">
+            <h5>
+              {{subtitle}}
+            </h5>
+            <p class="article_text">
+              {{articleData.contents[i]}}
+            </p>
+          </div>
+          <hr>
+          <address>
+            {{articleData.author}}
+          </address>
+          <div class="article_tags_list">
+            <div *ngFor="let tag of articleData.tags"
+                 class="article_tags">
+              {{tag}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <app-recommendation-block [style.max-width.px]="1152" [existingTags]="articleData.tags"></app-recommendation-block>
+</main>
+
+<ng-template #empty>
+  <app-spinner></app-spinner>
+</ng-template>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,10 @@
+<ng-container *ngIf="!!articlesData.length">
+  <div>
+    <h1 class="recomendation-block-header-text">The most similar articles</h1>
+  </div>
+  <div class="recomendation-block-wrapper">
+    <app-article-prev *ngFor="let articleContent of articlesData" [articleContent]="articleContent">
+    </app-article-prev>
+  </div>
+
+</ng-container>

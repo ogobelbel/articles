@@ -1,0 +1,32 @@
+<div class="article_tags_list">
+  <div (click)="collectTag(item)"
+       *ngFor="let item of baseOfTags2; let i = index">
+    <div class="article_tags article_tags_add"
+         [ngClass]="tags.indexOf(item)!==-1 ? 'article_tags_checked' : ''">
+      {{item}}
+    </div>
+  </div>
+</div>
+<mat-form-field>
+  <mat-label>
+    Add a tag
+  </mat-label>
+  <mat-chip-list #chipList
+                 aria-label="Fruit selection">
+    <mat-chip *ngFor="let tag of tags"
+              [selectable]="selectable"
+              [removable]="removable"
+              (removed)="remove(tag)">
+      {{tag}}
+      <mat-icon matChipRemove
+                *ngIf="removable">
+        cancel
+      </mat-icon>
+    </mat-chip>
+    <input placeholder="New tag..."
+           [matChipInputFor]="chipList"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+           (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+</mat-form-field>

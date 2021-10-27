@@ -1,0 +1,27 @@
+:root {
+  --bg-color: #FFFFFF;
+  --bg-color-secondary: #C9C9C;
+  --font-primary-color: #1F1F1F;
+  --font-secondary-color: #7a7a7a;
+  --button-font-color: #FFFFFF;
+  --grey-color-1: #1F1F1F;
+  --grey-color-2: #64676A;
+  --grey-color-3: #E5E5E5;
+  --blue-color: #2F80ED;
+  --orange-color-1: #F0AB00
+}
+$background-primary: var(--bg-color);
+$font-primary-color: var(--font-primary-color);
+$button-font-color: var(--button-font-color);
+$bg-color-secondary: var(--bg-color-secondary);
+$font-secondary-color: var(--font-secondary-color);
+
+$blue-color: var(--blue-color);
+
+$grey-color-1: var(--grey-color-1);
+$grey-color-2: var(--grey-color-2);
+$grey-color-3:  var(--grey-color-3);
+
+$orange-color-1: var(--orange-color-1);
+
+$button-font-color:  var(--button-font-color);

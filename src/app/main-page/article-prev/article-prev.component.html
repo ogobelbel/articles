@@ -1,0 +1,12 @@
+<a routerLink='/article/{{articleContent.id}}' class="article_prev_block">
+  <div [ngStyle]="backgroundImageUrl" class="article_prev_img"></div>
+  <div class="article_text_wrap">
+    <h6>{{articleContent.title}} </h6>
+    <p class="article_text_style">{{articleContent.preview}}</p>
+  </div>
+</a>
+
+<ng-template #spinner>
+  <app-spinner></app-spinner>
+</ng-template>
+
